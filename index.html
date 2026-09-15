@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Budget Tracker</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Page Heading -->
     <header>
         <img
             src="https://via.placeholder.com/80"
@@ -18,17 +31,25 @@
         >
 
         <h1>My Budget Tracker</h1>
-        <p>Track your income and expenses in one place.</p>
+
+        <p>
+            Track your income and expenses in one place.
+        </p>
     </header>
 
     <main>
 
         <!-- Add Expense Form -->
         <section id="add-expense" class="add-expense-section">
+
             <h2>Add Expense</h2>
 
             <form>
-                <label for="expense-name">Expense Name</label>
+
+                <label for="expense-name">
+                    Expense Name
+                </label>
+
                 <input
                     type="text"
                     id="expense-name"
@@ -36,7 +57,10 @@
                     placeholder="Enter expense name"
                 >
 
-                <label for="expense-amount">Amount</label>
+                <label for="expense-amount">
+                    Amount
+                </label>
+
                 <input
                     type="number"
                     id="expense-amount"
@@ -44,7 +68,10 @@
                     placeholder="Enter amount"
                 >
 
-                <label for="expense-category">Category</label>
+                <label for="expense-category">
+                    Category
+                </label>
+
                 <select
                     id="expense-category"
                     name="expense-category"
@@ -57,15 +84,21 @@
                     <option value="other">Other</option>
                 </select>
 
-                <button type="submit">Add Expense</button>
+                <button type="submit">
+                    Add Expense
+                </button>
+
             </form>
+
         </section>
 
-        <!-- Expenses Table -->
+        <!-- Expense Table -->
         <section class="expenses-section">
+
             <h2>Your Expenses</h2>
 
             <table>
+
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -76,6 +109,7 @@
                 </thead>
 
                 <tbody>
+
                     <tr>
                         <td>Lunch</td>
                         <td>KSh 350</td>
@@ -110,26 +144,36 @@
                         <td>Other</td>
                         <td>2026-09-12</td>
                     </tr>
+
                 </tbody>
+
             </table>
+
         </section>
 
-        <!-- Interactive Details Element -->
+        <!-- How to Use -->
         <section class="instructions-section">
+
             <details>
-                <summary>How to use this tracker</summary>
+
+                <summary>
+                    How to use this tracker
+                </summary>
 
                 <p>
-                    Enter the expense name, amount, and category in the form.
-                    The expense table below currently contains sample data.
-                    In future weeks, the tracker will be upgraded to add and
-                    manage expenses automatically.
+                    Enter the expense name, amount, and category in the
+                    Add Expense form. The table currently contains sample
+                    expense records. More functionality will be added
+                    in future weeks.
                 </p>
+
             </details>
+
         </section>
 
-        <!-- Multimedia Content -->
+        <!-- Multimedia -->
         <section class="multimedia-section">
+
             <h2>Budgeting Tips</h2>
 
             <iframe
@@ -139,9 +183,11 @@
                 title="Budgeting tips video"
                 frameborder="0"
             ></iframe>
+
         </section>
 
     </main>
 
 </body>
+
 </html>
