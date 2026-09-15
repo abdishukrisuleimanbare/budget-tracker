@@ -1,136 +1,370 @@
-/* Element selector */
+/* =========================================
+   PERSONAL BUDGET & EXPENSE TRACKER
+   WEEK 3 VISUAL DESIGN
+   ========================================= */
+
+
+/* =========================================
+   COLOR PALETTE
+   ========================================= */
+
+:root {
+    --primary-color: #17324d;
+    --secondary-color: #2e8b57;
+    --secondary-hover: #246b45;
+
+    --page-background: #eef2f5;
+    --card-background: #ffffff;
+
+    --text-color: #333333;
+    --muted-text: #666666;
+
+    --border-color: #d6dde3;
+    --alternate-row: #f5f8fa;
+    --hover-row: #e8f1ec;
+}
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+    background-color: var(--page-background);
+    color: var(--text-color);
+
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 30px;
+
+    line-height: 1.6;
 }
 
-/* Element selector */
-header {
-    text-align: center;
-    margin-bottom: 30px;
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
 }
 
-/* ID selector */
-#add-expense {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-}
-
-/* Class selector */
-.add-expense-section {
-    border-radius: 8px;
-}
-
-/* Descendant selector */
-.expenses-section td {
-    padding: 12px;
-}
-
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-}
-
-/* Table header */
-th {
-    background-color: #333;
-    color: white;
-    padding: 12px;
-    text-align: left;
-}
-
-/* Table cells */
-td {
-    border: 1px solid #ddd;
-}
-
-/* Alternating table rows */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* Hover effect */
-tr:hover {
-    background-color: #ddd;
-}
-
-/* Negation pseudo-class */
-input:not([type="submit"]) {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
-
-/* Select styling */
-select {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-/* Focus pseudo-class */
-input:focus,
-select:focus {
-    outline: 2px solid #555;
-}
-
-/* Button styling */
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Expenses section */
-.expenses-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Instructions section */
-.instructions-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Summary interactive element */
-summary {
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Multimedia section */
-.multimedia-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* Heading */
 h1 {
-    font-size: 32px;
+    font-size: 34px;
+
+    margin: 0 0 10px;
 }
 
 h2 {
     margin-top: 0;
+}
+
+
+/* =========================================
+   PAGE HEADING CARD
+   ========================================= */
+
+header {
+    max-width: 900px;
+
+    margin: 0 auto 30px;
+    padding: 30px;
+
+    background-color: var(--card-background);
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+header img {
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+header p {
+    color: var(--muted-text);
+
+    margin: 0;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   ADD EXPENSE FORM CARD
+   ========================================= */
+
+#add-expense {
+    background-color: var(--card-background);
+
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.add-expense-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   FORM LABELS
+   ========================================= */
+
+form label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
+
+form input,
+form select {
+    width: 100%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+    margin-bottom: 18px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+   ========================================= */
+
+form input:focus,
+form select:focus {
+    outline: none;
+
+    border-color: var(--secondary-color);
+
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.15);
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+button {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-hover);
+}
+
+
+/* =========================================
+   EXPENSE TABLE CARD
+   ========================================= */
+
+.expenses-section {
+    background-color: var(--card-background);
+
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    border: 1px solid var(--border-color);
+}
+
+
+/* =========================================
+   TABLE HEADER
+   ========================================= */
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    padding: 14px;
+
+    border: 1px solid var(--primary-color);
+
+    text-align: left;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   TABLE CELLS
+   ========================================= */
+
+td {
+    padding: 12px;
+
+    border: 1px solid var(--border-color);
+}
+
+
+/* =========================================
+   ALTERNATING ROW COLORS
+   ========================================= */
+
+tr:nth-child(even) {
+    background-color: var(--alternate-row);
+}
+
+
+/* =========================================
+   TABLE HOVER
+   ========================================= */
+
+tr:hover {
+    background-color: var(--hover-row);
+}
+
+
+/* =========================================
+   INSTRUCTIONS CARD
+   ========================================= */
+
+.instructions-section {
+    background-color: var(--card-background);
+
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+summary {
+    color: var(--primary-color);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+details p {
+    color: var(--muted-text);
+}
+
+
+/* =========================================
+   MULTIMEDIA CARD
+   ========================================= */
+
+.multimedia-section {
+    background-color: var(--card-background);
+
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.multimedia-section h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+iframe {
+    max-width: 100%;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    header,
+    #add-expense,
+    .expenses-section,
+    .instructions-section,
+    .multimedia-section {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
 }
