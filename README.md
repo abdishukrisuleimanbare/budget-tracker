@@ -2,99 +2,137 @@
 
 ## Project Description
 
-The Personal Budget & Expense Tracker is a simple web-based project designed to help users organize and track their expenses.
+The Personal Budget & Expense Tracker is a simple web-based application designed to help users organize and track their expenses.
 
-This is the Week 2 version of the project. It builds directly on the HTML and CSS structure created in Week 1.
+The project is being developed progressively throughout the course. Each week adds another layer of development skills to the same Budget Tracker project.
 
-## Project Files
+## Week 3 - Visual Design
 
-### index.html
+In Week 3, the existing Budget Tracker was improved using CSS to create a cleaner, more professional, and user-friendly visual design.
 
-The `index.html` file contains the structure and content of the Budget Tracker.
+No new JavaScript functionality was added in this week.
 
-It includes:
+## Color Palette
 
-- Main page heading and description
-- Budget Tracker logo
-- Add Expense form
-- Expense name input
-- Expense amount input
-- Expense category dropdown
-- Add Expense button
-- Expense table
-- Five sample expenses
-- How to use section
-- YouTube video
+A consistent color palette was applied throughout the application.
 
-### style.css
+The design uses:
 
-The `style.css` file controls the visual appearance of the website.
+- Dark navy for main headings and table headers
+- Green for buttons and interactive elements
+- Light gray for the page background
+- White for content cards
+- Light gray borders for structure
+- Light background colors for alternating table rows
 
-It includes:
+CSS custom properties were used to keep the colors consistent throughout the stylesheet.
 
-- Page spacing and background
-- Section styling
-- Table borders
-- Collapsed table borders
-- Table cell padding
-- Colored table header
-- Alternating table row colors
-- Table hover effect
-- Input focus effects
-- Button cursor styling
-- Advanced CSS selectors
+## Typography
 
-## Features
+Google Fonts were added to improve readability and visual hierarchy.
 
-### Add Expense Form
+### Poppins
 
-The form contains fields for:
+Poppins is used for:
 
-- Expense name
-- Expense amount
-- Expense category
+- Main heading
+- Section headings
+- Table headings
+- Interactive summary text
 
-The category field contains five categories:
+### Open Sans
 
-1. Food
-2. Transport
-3. Rent
-4. Entertainment
-5. Other
+Open Sans is used for:
 
-The Add Expense button is currently visual only. Functionality will be added in a later week.
+- Body text
+- Form labels
+- Input fields
+- Select fields
+- Buttons
+- Table content
 
-### Expense Table
+## Expense Table Styling
 
-The expense table contains the following columns:
+The expense table was styled with:
+
+- Collapsed borders
+- Cell padding
+- A dark colored header
+- Alternating row colors
+- Hover effects
+- Consistent typography
+- Rounded surrounding card corners
+
+The table contains the following columns:
 
 - Name
 - Amount
 - Category
 - Date
 
-It currently contains five sample expense records.
+Five sample expense records are included.
 
-### Multimedia
+## Add Expense Form Styling
 
-The page includes:
+The Add Expense form includes:
 
-- A Budget Tracker logo
-- An embedded YouTube video
+- Expense name input
+- Amount input
+- Category dropdown
+- Add Expense button
 
-### Interactive Elements
+The form was visually improved using:
 
-The page includes a collapsible "How to use this tracker" section.
+- Padding
+- Margins
+- Borders
+- Rounded corners
+- Focus effects
+- Consistent fonts
+- Consistent button styling
 
-The table rows also change appearance when the mouse moves over them.
+## CSS Box Model
+
+The CSS Box Model was intentionally used throughout the application.
+
+The following properties were applied:
+
+- Margin
+- Padding
+- Border
+- Border radius
+
+The following areas are presented as distinct visual cards:
+
+1. Page heading
+2. Add Expense form
+3. Expense table
+4. Instructions section
+5. Multimedia section
+
+## Existing Interactive Elements
+
+The project also contains:
+
+- A category dropdown
+- An Add Expense form
+- A collapsible "How to use this tracker" section
+- Table row hover effects
+- Input focus effects
+
+The Add Expense button is currently visual only. Functionality will be developed in later weeks.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
+- Google Fonts
 
-## Project Status
+## Project Structure
 
-This is the Week 2 static version of the Personal Budget & Expense Tracker.
-
-JavaScript functionality and expense calculations will be added in later weeks.
+```text
+budget-tracker/
+│
+├── index.html
+├── style.css
+└── README.md
