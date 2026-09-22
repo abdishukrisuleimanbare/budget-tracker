@@ -1,138 +1,76 @@
-# Personal Budget & Expense Tracker
 
-## Project Description
+# SpendWise Dashboard Shell
 
-The Personal Budget & Expense Tracker is a simple web-based application designed to help users organize and track their expenses.
+## Week 4: Rebuild the Tracker's Layout with Flexbox and Grid
 
-The project is being developed progressively throughout the course. Each week adds another layer of development skills to the same Budget Tracker project.
+### Project Overview
+SpendWise is a personal finance dashboard shell designed to provide a clear visual overview of monthly budgeting and spending categories.
 
-## Week 3 - Visual Design
-
-In Week 3, the existing Budget Tracker was improved using CSS to create a cleaner, more professional, and user-friendly visual design.
-
-No new JavaScript functionality was added in this week.
-
-## Color Palette
-
-A consistent color palette was applied throughout the application.
-
-The design uses:
-
-- Dark navy for main headings and table headers
-- Green for buttons and interactive elements
-- Light gray for the page background
-- White for content cards
-- Light gray borders for structure
-- Light background colors for alternating table rows
-
-CSS custom properties were used to keep the colors consistent throughout the stylesheet.
-
-## Typography
-
-Google Fonts were added to improve readability and visual hierarchy.
-
-### Poppins
-
-Poppins is used for:
-
-- Main heading
-- Section headings
-- Table headings
-- Interactive summary text
-
-### Open Sans
-
-Open Sans is used for:
-
-- Body text
-- Form labels
-- Input fields
-- Select fields
-- Buttons
-- Table content
-
-## Expense Table Styling
-
-The expense table was styled with:
-
-- Collapsed borders
-- Cell padding
-- A dark colored header
-- Alternating row colors
-- Hover effects
-- Consistent typography
-- Rounded surrounding card corners
-
-The table contains the following columns:
-
-- Name
-- Amount
-- Category
-- Date
-
-Five sample expense records are included.
-
-## Add Expense Form Styling
-
-The Add Expense form includes:
-
-- Expense name input
-- Amount input
-- Category dropdown
-- Add Expense button
-
-The form was visually improved using:
-
-- Padding
-- Margins
-- Borders
-- Rounded corners
-- Focus effects
-- Consistent fonts
-- Consistent button styling
-
-## CSS Box Model
-
-The CSS Box Model was intentionally used throughout the application.
-
-The following properties were applied:
-
-- Margin
-- Padding
-- Border
-- Border radius
-
-The following areas are presented as distinct visual cards:
-
-1. Page heading
-2. Add Expense form
-3. Expense table
-4. Instructions section
-5. Multimedia section
-
-## Existing Interactive Elements
-
-The project also contains:
-
-- A category dropdown
-- An Add Expense form
-- A collapsible "How to use this tracker" section
-- Table row hover effects
-- Input focus effects
-
-The Add Expense button is currently visual only. Functionality will be developed in later weeks.
+This project was developed as part of the PLP Web Development capstone. It focuses on responsive layout, modern CSS techniques, accessibility, and visual design. All financial information is static demonstration content.
 
 ## Technologies Used
-
 - HTML5
 - CSS3
-- Google Fonts
+- CSS Grid
+- CSS Flexbox
+- CSS Custom Properties
+- Media Queries
+- Google Fonts (Inter)
 
-## Project Structure
+## Project Files
 
-```text
-budget-tracker/
-│
-├── index.html
-├── style.css
-└── README.md
+### 1. index.html
+Contains the dashboard structure, including:
+- Sidebar navigation
+- Dashboard header and profile
+- Monthly financial summary
+- Six financial category cards
+- Progress indicators
+- Footer
+
+Semantic HTML elements such as `header`, `nav`, `main`, `section`, `article`, and `footer` organize the content.
+
+### 2. style.css
+Controls the dashboard's design and responsive behavior.
+
+- CSS Grid creates the overall dashboard layout and card grids.
+- Flexbox arranges the sidebar, header, navigation, and card content.
+- CSS custom properties define the theme colors.
+- Media queries adapt the layout to smaller screens.
+- Hover and keyboard-focus transitions add subtle card interactions.
+- A dark theme is supported through `prefers-color-scheme: dark`.
+
+## Responsive Design
+The dashboard uses a two-column layout on larger screens. Below 768px, the page changes to a single-column layout, with the sidebar above the main content.
+
+The layout can be tested using the browser's DevTools Device Toolbar.
+
+## Accessibility
+- Semantic HTML structure
+- Accessible navigation label
+- Descriptive page title
+- Keyboard-focusable category cards
+- Visible keyboard-focus styles
+- Text labels alongside financial information
+
+## Dashboard Categories
+1. Food & Groceries
+2. Transport
+3. Rent & Housing
+4. Entertainment
+5. Savings
+6. Utilities
+
+## How to Run
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` in a browser, or use the VS Code Live Server extension.
+
+## Learning Outcomes
+This project demonstrates practical use of CSS Grid, Flexbox, responsive media queries, CSS variables, and interactive focus states to build a modern dashboard shell.
+
+## Author
+Abdishukri Suleiman Bare
+
+## Project Repository
+https://github.com/abdishukrisuleimanbare/budget-tracker
