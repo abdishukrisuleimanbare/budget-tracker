@@ -1,77 +1,51 @@
-# SpendWise Dashboard Shell
+# SpendWise Dashboard
 
-## Project Overview
+## Week 4 - Dashboard Shell with CSS Grid and Flexbox
 
-SpendWise is a personal budgeting dashboard designed to provide a clear visual overview of monthly financial spending.
+SpendWise is a personal finance dashboard designed to help users view and organize their monthly financial information.
 
-For Week 4, I rebuilt the SpendWise tracker as a responsive dashboard shell using CSS Grid and Flexbox.
+This week's project focuses on building the visual dashboard structure using modern CSS layout techniques.
 
-The dashboard contains a sidebar navigation menu, a header, and six financial category cards with realistic static financial information.
+## Project Features
 
-## Technologies Used
+The dashboard contains:
 
-* HTML5
-* CSS3
-* CSS Grid
-* CSS Flexbox
-* CSS Custom Properties
-* Responsive Media Queries
-
-## Dashboard Components
-
-### 1. Sidebar
-
-The sidebar contains the SpendWise branding and navigation links for:
-
-* Dashboard
-* Budget
-* Expenses
-* Savings
-* Reports
-
-### 2. Header
-
-The dashboard header contains a welcome message, the dashboard title, and the monthly budget summary.
-
-### 3. Financial Category Cards
-
-The dashboard includes six category cards:
-
-* Food
-* Transport
-* Rent
-* Entertainment
-* Savings
-* Utilities
-
-Each card displays realistic static financial information including spending, budget or savings targets, and percentage progress.
+* Sidebar navigation
+* Dashboard header
+* Monthly budget summary
+* Food category card
+* Transport category card
+* Rent category card
+* Entertainment category card
+* Savings category card
+* Utilities category card
 
 ## CSS Grid
 
-CSS Grid is used for the overall dashboard structure and for arranging the financial category cards.
+CSS Grid is used to create the main dashboard structure.
 
-The main dashboard uses two columns on larger screens:
+The page is divided into:
 
 * Sidebar
-* Main content
+* Main content area
 
-The category cards are arranged in a three-column grid on larger screens.
+CSS Grid is also used to arrange the six financial category cards into a responsive dashboard layout.
 
 ## Flexbox
 
-Flexbox is used inside the dashboard components.
-
-It is used for:
+Flexbox is used inside different parts of the dashboard, including:
 
 * Sidebar navigation
-* Header layout
-* Card content
+* Header
+* Dashboard cards
 * Card headers
-* Card footers
+* Card footer information
+
+This makes the content easier to align and organize.
 
 ## CSS Custom Properties
 
-The project uses CSS variables in the `:root` selector to create a reusable visual theme.
+The project uses CSS custom properties in the `:root` selector to create a consistent theme.
 
 Variables include:
 
@@ -82,49 +56,63 @@ Variables include:
 * Primary text color
 * Secondary text color
 * Border color
+* Shadow color
 
 ## Responsive Design
 
-A media query is used below 768px to create a single-column responsive layout.
+A media query is included for screens below 768px.
 
-The sidebar, header, navigation, and dashboard cards adapt to smaller screen sizes.
+On smaller screens:
 
-The layout was designed to be checked using the browser's DevTools Device Toolbar.
+* The sidebar and main content become a single-column layout.
+* Navigation items wrap appropriately.
+* Dashboard cards stack vertically.
+* The header changes to a vertical layout.
+
+The responsive layout can be tested using the browser's DevTools Device Toolbar.
 
 ## Micro-interactions
 
-Dashboard cards include hover and keyboard-focus interactions.
+Dashboard cards include subtle hover and keyboard-focus effects.
 
-The interactions use:
+The interaction uses:
 
 * `transform`
 * `box-shadow`
 * CSS transitions
 
-The transition duration is 200ms, which is within the required 250ms limit.
+The transition duration is 200ms, which meets the assignment requirement of 250ms or less.
 
 ## Dark Theme
 
-As a stretch goal, the project includes a dark theme using:
+A dark theme is included as a stretch goal using:
 
 ```css
 @media (prefers-color-scheme: dark)
 ```
 
-The dark theme changes the CSS custom property values while keeping the same dashboard structure.
+The dark theme changes the CSS custom properties while keeping the same dashboard structure.
 
-## Project Files
+## Technologies Used
+
+* HTML5
+* CSS3
+* CSS Grid
+* Flexbox
+* CSS Custom Properties
+* Responsive Design
+* GitHub
+
+## Project Structure
 
 ```text
-index.html
-style.css
-README.md
+budget-tracker/
+│
+├── index.html
+├── style.css
+└── README.md
 ```
-
-## Author
-
-Abdishukri Suleiman Bare
 
 ## Project Status
 
-Week 4 SpendWise Dashboard Shell completed with CSS Grid, Flexbox, responsive design, CSS custom properties, micro-interactions, and a dark-theme stretch goal.
+Week 4 SpendWise Dashboard Shell completed with a responsive Grid and Flexbox layout.
