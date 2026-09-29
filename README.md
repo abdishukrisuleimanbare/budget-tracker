@@ -1,76 +1,130 @@
-
 # SpendWise Dashboard Shell
 
-## Week 4: Rebuild the Tracker's Layout with Flexbox and Grid
+## Project Overview
 
-### Project Overview
-SpendWise is a personal finance dashboard shell designed to provide a clear visual overview of monthly budgeting and spending categories.
+SpendWise is a personal budgeting dashboard designed to provide a clear visual overview of monthly financial spending.
 
-This project was developed as part of the PLP Web Development capstone. It focuses on responsive layout, modern CSS techniques, accessibility, and visual design. All financial information is static demonstration content.
+For Week 4, I rebuilt the SpendWise tracker as a responsive dashboard shell using CSS Grid and Flexbox.
+
+The dashboard contains a sidebar navigation menu, a header, and six financial category cards with realistic static financial information.
 
 ## Technologies Used
-- HTML5
-- CSS3
-- CSS Grid
-- CSS Flexbox
-- CSS Custom Properties
-- Media Queries
-- Google Fonts (Inter)
+
+* HTML5
+* CSS3
+* CSS Grid
+* CSS Flexbox
+* CSS Custom Properties
+* Responsive Media Queries
+
+## Dashboard Components
+
+### 1. Sidebar
+
+The sidebar contains the SpendWise branding and navigation links for:
+
+* Dashboard
+* Budget
+* Expenses
+* Savings
+* Reports
+
+### 2. Header
+
+The dashboard header contains a welcome message, the dashboard title, and the monthly budget summary.
+
+### 3. Financial Category Cards
+
+The dashboard includes six category cards:
+
+* Food
+* Transport
+* Rent
+* Entertainment
+* Savings
+* Utilities
+
+Each card displays realistic static financial information including spending, budget or savings targets, and percentage progress.
+
+## CSS Grid
+
+CSS Grid is used for the overall dashboard structure and for arranging the financial category cards.
+
+The main dashboard uses two columns on larger screens:
+
+* Sidebar
+* Main content
+
+The category cards are arranged in a three-column grid on larger screens.
+
+## Flexbox
+
+Flexbox is used inside the dashboard components.
+
+It is used for:
+
+* Sidebar navigation
+* Header layout
+* Card content
+* Card headers
+* Card footers
+
+## CSS Custom Properties
+
+The project uses CSS variables in the `:root` selector to create a reusable visual theme.
+
+Variables include:
+
+* Brand color
+* Accent color
+* Background color
+* Surface color
+* Primary text color
+* Secondary text color
+* Border color
+
+## Responsive Design
+
+A media query is used below 768px to create a single-column responsive layout.
+
+The sidebar, header, navigation, and dashboard cards adapt to smaller screen sizes.
+
+The layout was designed to be checked using the browser's DevTools Device Toolbar.
+
+## Micro-interactions
+
+Dashboard cards include hover and keyboard-focus interactions.
+
+The interactions use:
+
+* `transform`
+* `box-shadow`
+* CSS transitions
+
+The transition duration is 200ms, which is within the required 250ms limit.
+
+## Dark Theme
+
+As a stretch goal, the project includes a dark theme using:
+
+```css
+@media (prefers-color-scheme: dark)
+```
+
+The dark theme changes the CSS custom property values while keeping the same dashboard structure.
 
 ## Project Files
 
-### 1. index.html
-Contains the dashboard structure, including:
-- Sidebar navigation
-- Dashboard header and profile
-- Monthly financial summary
-- Six financial category cards
-- Progress indicators
-- Footer
-
-Semantic HTML elements such as `header`, `nav`, `main`, `section`, `article`, and `footer` organize the content.
-
-### 2. style.css
-Controls the dashboard's design and responsive behavior.
-
-- CSS Grid creates the overall dashboard layout and card grids.
-- Flexbox arranges the sidebar, header, navigation, and card content.
-- CSS custom properties define the theme colors.
-- Media queries adapt the layout to smaller screens.
-- Hover and keyboard-focus transitions add subtle card interactions.
-- A dark theme is supported through `prefers-color-scheme: dark`.
-
-## Responsive Design
-The dashboard uses a two-column layout on larger screens. Below 768px, the page changes to a single-column layout, with the sidebar above the main content.
-
-The layout can be tested using the browser's DevTools Device Toolbar.
-
-## Accessibility
-- Semantic HTML structure
-- Accessible navigation label
-- Descriptive page title
-- Keyboard-focusable category cards
-- Visible keyboard-focus styles
-- Text labels alongside financial information
-
-## Dashboard Categories
-1. Food & Groceries
-2. Transport
-3. Rent & Housing
-4. Entertainment
-5. Savings
-6. Utilities
-
-## How to Run
-1. Clone or download this repository.
-2. Open the project folder in Visual Studio Code.
-3. Open `index.html` in a browser, or use the VS Code Live Server extension.
-
-## Learning Outcomes
-This project demonstrates practical use of CSS Grid, Flexbox, responsive media queries, CSS variables, and interactive focus states to build a modern dashboard shell.
+```text
+index.html
+style.css
+README.md
+```
 
 ## Author
+
 Abdishukri Suleiman Bare
 
-## Project Repository
-https://github.com/abdishukrisuleimanbare/budget-tracker
+## Project Status
+
+Week 4 SpendWise Dashboard Shell completed with CSS Grid, Flexbox, responsive design, CSS custom properties, micro-interactions, and a dark-theme stretch goal.
