@@ -1,118 +1,189 @@
-# SpendWise Dashboard
+````markdown
+# SpendWise Budget Tracker
 
-## Week 4 - Dashboard Shell with CSS Grid and Flexbox
+SpendWise is a personal budget tracking dashboard designed to help users understand their monthly budget, expenses, and remaining balance.
 
-SpendWise is a personal finance dashboard designed to help users view and organize their monthly financial information.
+This project is being developed progressively as part of the PLP Software Development/Web Development capstone.
 
-This week's project focuses on building the visual dashboard structure using modern CSS layout techniques.
+## Week 6: JavaScript Foundation
 
-## Project Features
+This week transforms SpendWise from a static visual dashboard into a JavaScript-powered application that can collect user information and perform basic budget calculations.
 
-The dashboard contains:
+## What SpendWise Does
 
-* Sidebar navigation
-* Dashboard header
-* Monthly budget summary
-* Food category card
-* Transport category card
-* Rent category card
-* Entertainment category card
-* Savings category card
-* Utilities category card
+The current JavaScript version allows a user to:
 
-## CSS Grid
-
-CSS Grid is used to create the main dashboard structure.
-
-The page is divided into:
-
-* Sidebar
-* Main content area
-
-CSS Grid is also used to arrange the six financial category cards into a responsive dashboard layout.
-
-## Flexbox
-
-Flexbox is used inside different parts of the dashboard, including:
-
-* Sidebar navigation
-* Header
-* Dashboard cards
-* Card headers
-* Card footer information
-
-This makes the content easier to align and organize.
-
-## CSS Custom Properties
-
-The project uses CSS custom properties in the `:root` selector to create a consistent theme.
-
-Variables include:
-
-* Brand color
-* Accent color
-* Background color
-* Surface color
-* Primary text color
-* Secondary text color
-* Border color
-* Shadow color
-
-## Responsive Design
-
-A media query is included for screens below 768px.
-
-On smaller screens:
-
-* The sidebar and main content become a single-column layout.
-* Navigation items wrap appropriately.
-* Dashboard cards stack vertically.
-* The header changes to a vertical layout.
-
-The responsive layout can be tested using the browser's DevTools Device Toolbar.
-
-## Micro-interactions
-
-Dashboard cards include subtle hover and keyboard-focus effects.
-
-The interaction uses:
-
-* `transform`
-* `box-shadow`
-* CSS transitions
-
-The transition duration is 200ms, which meets the assignment requirement of 250ms or less.
-
-## Dark Theme
-
-A dark theme is included as a stretch goal using:
-
-```css
-@media (prefers-color-scheme: dark)
-```
-
-The dark theme changes the CSS custom properties while keeping the same dashboard structure.
+- Enter a monthly budget.
+- Enter total expenses.
+- Calculate the remaining balance.
+- Determine whether the user is within or over their budget.
+- Display the calculated results in the browser console.
 
 ## Technologies Used
 
-* HTML5
-* CSS3
-* CSS Grid
-* Flexbox
-* CSS Custom Properties
-* Responsive Design
-* GitHub
+- HTML5
+- CSS3
+- JavaScript
+- CSS Grid
+- CSS Flexbox
+- CSS Custom Properties
+- Responsive Design
 
-## Project Structure
+## JavaScript Concepts Implemented
+
+### 1. Variables
+
+JavaScript variables are used to store important application data.
+
+Examples include:
+
+```javascript
+let appName = "SpendWise";
+let monthlyBudget = 50000;
+let totalExpenses = 0;
+let remainingBalance = monthlyBudget;
+````
+
+Variables are also used to store user-provided budget and expense values.
+
+### 2. Data Types
+
+The project uses different JavaScript data types, including:
+
+* Strings for application names and messages.
+* Numbers for budgets and expenses.
+
+User input from `prompt()` is converted from text into numbers using:
+
+```javascript
+Number(userBudgetInput);
+```
+
+### 3. User Input
+
+SpendWise collects user information using JavaScript `prompt()`.
+
+The user provides:
+
+* Monthly budget.
+* Total expenses.
+
+Example:
+
+```javascript
+let userBudgetInput = prompt(
+    "Enter your monthly budget in KSh:"
+);
+```
+
+The information is then stored in variables for processing.
+
+### 4. Calculations
+
+SpendWise calculates the remaining balance using:
+
+```text
+Remaining Balance = Monthly Budget - Total Expenses
+```
+
+For example:
+
+```text
+Monthly Budget = KSh 50,000
+Total Expenses = KSh 37,500
+
+Remaining Balance = KSh 12,500
+```
+
+### 5. Functions
+
+A reusable function is used to organize the budget calculation:
+
+```javascript
+function calculateRemainingBudget(budget, expenses) {
+    return budget - expenses;
+}
+```
+
+The function accepts the budget and expenses as parameters and returns the remaining balance.
+
+Using a function avoids repeating the same calculation and makes the program easier to maintain.
+
+### 6. Conditional Logic
+
+The application uses conditional statements to determine the budget status.
+
+The program identifies whether:
+
+* The user is within the budget.
+* The user has used the full budget.
+* The user has exceeded the budget.
+
+### 7. Console Output
+
+Calculated results are displayed in the browser console using `console.log()`.
+
+The output includes:
+
+* Application name.
+* Monthly budget.
+* Total expenses.
+* Remaining balance.
+* Budget status.
+
+## Project Files
 
 ```text
 budget-tracker/
 │
 ├── index.html
 ├── style.css
+├── script.js
 └── README.md
 ```
 
-## Project Status
+### index.html
 
-Week 4 SpendWise Dashboard Shell completed with a responsive Grid and Flexbox layout.
+Contains the SpendWise dashboard structure and links the JavaScript file.
+
+### style.css
+
+Contains the visual design, CSS Grid and Flexbox layout, responsive design, CSS variables, and dashboard styling.
+
+### script.js
+
+Contains the JavaScript variables, user input, calculations, reusable functions, validation, conditional logic, and console output.
+
+### README.md
+
+Documents the project and explains the JavaScript concepts implemented.
+
+## Testing
+
+The application was tested using different budget and expense values, including:
+
+* Expenses lower than the budget.
+* Expenses equal to the budget.
+* Expenses greater than the budget.
+* Invalid user input.
+
+The results are displayed clearly in the browser console.
+
+## Future Improvements
+
+Future versions of SpendWise can add:
+
+* Transaction entry forms.
+* Automatic expense categorization.
+* Dynamic dashboard updates.
+* Local storage.
+* Budget progress indicators.
+* Charts and reports.
+* More advanced JavaScript functionality.
+
+## Conclusion
+
+The Week 6 JavaScript foundation provides the basic programming logic required to develop SpendWise from a static dashboard into an interactive budget tracking application.
+
+```
+```
