@@ -1,16 +1,7 @@
-```css
-/* =========================================
-   SpendWise Dashboard
-   CSS Grid + Flexbox
-   ========================================= */
-
-/* =========================================
-   1. CSS CUSTOM PROPERTIES
-   ========================================= */
-
+/* SpendWise interactive dashboard: CSS Grid, Flexbox, and responsive layout. */
 :root {
     --brand-color: #2563eb;
-    --accent-color: #10b981;
+    --accent-color: #059669;
     --surface-color: #ffffff;
     --background-color: #f3f6fb;
     --primary-text: #172033;
@@ -20,16 +11,7 @@
     --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
-
-/* =========================================
-   2. GENERAL RESET
-   ========================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -38,131 +20,51 @@ body {
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-}
-
-
-/* =========================================
-   3. OVERALL DASHBOARD - CSS GRID
-   ========================================= */
+a { text-decoration: none; }
 
 .dashboard {
     min-height: 100vh;
-
-    /* CSS GRID requirement */
     display: grid;
-
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 240px minmax(0, 1fr);
 }
-
-
-/* =========================================
-   4. SIDEBAR
-   ========================================= */
 
 .sidebar {
     background: var(--sidebar-color);
-    color: #ffffff;
-
+    color: #fff;
     display: flex;
     flex-direction: column;
-
     padding: 28px 20px;
     min-height: 100vh;
 }
 
-.logo {
-    margin-bottom: 40px;
-}
+.logo { margin-bottom: 40px; }
+.logo h1 { font-size: 1.6rem; }
+.logo p, .sidebar-footer p { color: #94a3b8; font-size: 0.85rem; }
 
-.logo h1 {
-    font-size: 1.6rem;
-}
-
-.logo p {
-    color: #94a3b8;
-    font-size: 0.8rem;
-}
-
-
-/* =========================================
-   5. NAVIGATION - FLEXBOX
-   ========================================= */
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.nav-item {
-    color: #cbd5e1;
-
-    padding: 12px 14px;
-    border-radius: 8px;
-
-    transition:
-        background-color 200ms ease,
-        color 200ms ease;
-}
-
-.nav-item:hover,
-.nav-item.active {
-    background: var(--brand-color);
-    color: #ffffff;
-}
+.navigation { display: flex; flex-direction: column; gap: 8px; }
+.nav-item { color: #cbd5e1; padding: 12px 14px; border-radius: 8px; }
+.nav-item:hover, .nav-item.active { background: var(--brand-color); color: #fff; }
 
 .sidebar-footer {
     margin-top: auto;
     border-top: 1px solid #374151;
     padding-top: 20px;
 }
+.sidebar-footer strong { display: block; margin-top: 5px; font-size: 1.2rem; }
 
-.sidebar-footer p {
-    color: #94a3b8;
-    font-size: 0.85rem;
-}
-
-.sidebar-footer strong {
-    display: block;
-    margin-top: 5px;
-    font-size: 1.2rem;
-}
-
-
-/* =========================================
-   6. MAIN AREA
-   ========================================= */
-
-.main-area {
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* =========================================
-   7. HEADER - FLEXBOX
-   ========================================= */
+.main-area { min-width: 0; display: flex; flex-direction: column; }
 
 .header {
     background: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
-
     padding: 20px 32px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
 
-.header-title h2 {
-    font-size: 1.7rem;
-}
-
+.header-title h2 { font-size: 1.7rem; }
 .eyebrow {
     color: var(--brand-color);
     font-size: 0.75rem;
@@ -170,322 +72,179 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
-
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.user-profile strong,
-.user-profile span {
-    display: block;
-}
-
-.user-profile span {
-    color: var(--secondary-text);
-    font-size: 0.8rem;
-}
-
+.user-profile { display: flex; align-items: center; gap: 12px; }
+.user-profile strong, .user-profile span { display: block; }
+.user-profile span { color: var(--secondary-text); font-size: 0.8rem; }
 .user-avatar {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var(--brand-color);
-    color: #ffffff;
-
-    border-radius: 50%;
-    font-weight: bold;
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--brand-color); color: #fff;
+    border-radius: 50%; font-weight: bold;
 }
 
-
-/* =========================================
-   8. MAIN CONTENT
-   ========================================= */
-
-.content {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px;
-    flex: 1;
-}
+.content { width: 100%; max-width: 1280px; margin: 0 auto; padding: 32px; flex: 1; }
 
 .welcome-section {
     background: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-
     padding: 24px;
     margin-bottom: 24px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
 }
+.welcome-section h2 { margin: 4px 0; }
+.welcome-section p:last-child { color: var(--secondary-text); }
+.balance { text-align: right; }
+.balance span { display: block; color: var(--secondary-text); font-size: 0.85rem; }
+.balance strong { display: block; color: var(--accent-color); font-size: 1.5rem; margin-top: 4px; }
 
-.welcome-section h2 {
-    margin: 4px 0;
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
 }
-
-.welcome-section p:last-child {
-    color: var(--secondary-text);
+.summary-card, .panel {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
 }
+.summary-card { padding: 20px; }
+.summary-label { display: block; color: var(--secondary-text); font-size: 0.88rem; margin-bottom: 8px; }
+.summary-card strong { font-size: 1.25rem; overflow-wrap: anywhere; }
 
-.balance {
-    text-align: right;
+.panel { padding: 24px; margin-bottom: 24px; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.section-heading h2 { font-size: 1.25rem; margin-top: 3px; }
+
+.form-row {
+    display: grid;
+    grid-template-columns: auto minmax(140px, 1fr) auto;
+    gap: 12px;
+    align-items: center;
 }
-
-.balance span {
-    display: block;
-    color: var(--secondary-text);
-    font-size: 0.85rem;
+label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+.form-row label { margin-bottom: 0; }
+input, select {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 11px 12px;
+    font: inherit;
+    color: var(--primary-text);
+    background: #fff;
 }
-
-.balance strong {
-    display: block;
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    margin-top: 4px;
+input:focus, select:focus, button:focus-visible, a:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+    outline-offset: 2px;
+    border-color: var(--brand-color);
 }
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 16px;
+    background: var(--brand-color);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+button:hover { opacity: 0.92; transform: translateY(-1px); }
 
+.expense-form {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr auto;
+    gap: 14px;
+    align-items: end;
+}
+.field { min-width: 0; }
 
-/* =========================================
-   9. CATEGORY GRID - CSS GRID
-   ========================================= */
+.feedback {
+    margin-top: 16px;
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: #1e40af;
+    background: #eff6ff;
+    font-size: 0.92rem;
+}
+.feedback.success { color: #065f46; background: #ecfdf5; }
+.feedback.error { color: #991b1b; background: #fef2f2; }
 
 .category-grid {
     display: grid;
-
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 20px;
+    gap: 18px;
 }
-
-
-/* =========================================
-   10. CATEGORY CARDS - FLEXBOX
-   ========================================= */
-
 .category-card {
     background: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-
-    padding: 20px;
-
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-
-    min-height: 220px;
-
+    gap: 14px;
+    min-height: 190px;
     box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    /* Micro-interaction <= 250ms */
-    transition:
-        transform 200ms ease,
-        box-shadow 200ms ease;
+    transition: transform 180ms ease, box-shadow 180ms ease;
 }
-
-
-/* Hover state */
-.category-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
-}
-
-
-/* Keyboard focus state */
-.category-card:focus {
-    outline: 3px solid rgba(37, 99, 235, 0.25);
-    outline-offset: 2px;
-
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
-}
-
-
-/* =========================================
-   11. CARD CONTENT - FLEXBOX
-   ========================================= */
-
-.card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
+.category-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12); }
+.card-top, .card-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .category-icon {
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #eff6ff;
-    border-radius: 10px;
-
-    font-size: 1.2rem;
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    background: #eff6ff; border-radius: 10px; font-size: 1.2rem;
 }
+.status { color: #475569; background: #f1f5f9; padding: 4px 8px; border-radius: 20px; font-size: 0.72rem; font-weight: bold; }
+.card-content { flex: 1; }
+.card-content h3 { font-size: 1.05rem; }
+.card-content p, .card-bottom span { color: var(--secondary-text); font-size: 0.8rem; }
+.card-bottom strong { font-size: 1.05rem; }
+.progress { width: 100%; height: 7px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
+.progress span { display: block; height: 100%; background: var(--brand-color); border-radius: inherit; }
 
-.status {
-    color: var(--accent-color);
-    background: #ecfdf5;
+.within-budget { color: #047857; }
+.at-limit { color: #b45309; }
+.over-budget { color: #b91c1c; }
 
-    padding: 4px 8px;
-    border-radius: 20px;
+.table-wrap { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 13px 12px; border-bottom: 1px solid var(--border-color); }
+th { color: var(--secondary-text); font-size: 0.82rem; }
+td { font-size: 0.92rem; }
+.remove-button { background: #fee2e2; color: #991b1b; padding: 7px 10px; font-size: 0.82rem; }
+.remove-button:hover { background: #fecaca; }
+.empty-message { color: var(--secondary-text); padding-top: 12px; }
+.footer { padding: 20px 32px; color: var(--secondary-text); font-size: 0.8rem; text-align: center; }
 
-    font-size: 0.72rem;
-    font-weight: bold;
+@media (max-width: 1000px) {
+    .expense-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .expense-form button { align-self: end; }
+    .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-.card-content {
-    flex: 1;
-}
-
-.card-content h3 {
-    font-size: 1.1rem;
-}
-
-.card-content p {
-    color: var(--secondary-text);
-    font-size: 0.85rem;
-}
-
-.card-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.card-bottom strong {
-    font-size: 1.15rem;
-}
-
-.card-bottom span {
-    color: var(--secondary-text);
-    font-size: 0.78rem;
-}
-
-
-/* =========================================
-   12. PROGRESS BAR
-   ========================================= */
-
-.progress {
-    width: 100%;
-    height: 7px;
-
-    background: #e2e8f0;
-    border-radius: 10px;
-
-    overflow: hidden;
-}
-
-.progress span {
-    display: block;
-    height: 100%;
-
-    background: var(--brand-color);
-    border-radius: inherit;
-}
-
-
-/* =========================================
-   13. FOOTER
-   ========================================= */
-
-.footer {
-    padding: 20px 32px;
-
-    color: var(--secondary-text);
-    font-size: 0.8rem;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   14. RESPONSIVE DESIGN
-   Collapse below 768px
-   ========================================= */
-
 @media (max-width: 767px) {
-
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        min-height: auto;
-        padding: 20px;
-    }
-
-    .logo {
-        margin-bottom: 20px;
-    }
-
-    .navigation {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .nav-item {
-        flex: 1 1 140px;
-        text-align: center;
-    }
-
-    .sidebar-footer {
-        margin-top: 20px;
-    }
-
-    .header {
-        padding: 18px 20px;
-
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .welcome-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .balance {
-        text-align: left;
-    }
-
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        padding: 20px;
-    }
+    .dashboard { grid-template-columns: 1fr; }
+    .sidebar { min-height: auto; padding: 20px; }
+    .logo { margin-bottom: 20px; }
+    .navigation { flex-direction: row; flex-wrap: wrap; }
+    .nav-item { flex: 1 1 120px; text-align: center; }
+    .sidebar-footer { margin-top: 20px; }
+    .header { padding: 18px 20px; flex-direction: column; align-items: flex-start; }
+    .content { padding: 20px; }
+    .welcome-section { flex-direction: column; align-items: flex-start; }
+    .balance { text-align: left; }
+    .summary-grid, .category-grid { grid-template-columns: 1fr; }
+    .form-row, .expense-form { grid-template-columns: 1fr; }
+    .form-row label { margin-bottom: -5px; }
+    .panel { padding: 18px; }
+    .footer { padding: 20px; }
 }
-
-
-/* =========================================
-   15. DARK THEME - STRETCH GOAL
-   ========================================= */
-
 @media (prefers-color-scheme: dark) {
-
     :root {
         --brand-color: #60a5fa;
         --accent-color: #34d399;
@@ -497,17 +256,12 @@ a {
         --sidebar-color: #020617;
         --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-
-    .category-icon {
-        background: #1e3a5f;
-    }
-
-    .status {
-        background: #064e3b;
-    }
-
-    .progress {
-        background: #334155;
-    }
+    input, select { background: #0f172a; color: var(--primary-text); border-color: #475569; }
+    .category-icon { background: #1e3a5f; }
+    .status { background: #334155; color: #e2e8f0; }
+    .progress { background: #334155; }
+    .feedback { background: #1e3a8a; color: #dbeafe; }
+    .feedback.success { background: #064e3b; color: #d1fae5; }
+    .feedback.error { background: #7f1d1d; color: #fee2e2; }
+    .remove-button { background: #7f1d1d; color: #fee2e2; }
 }
-```
