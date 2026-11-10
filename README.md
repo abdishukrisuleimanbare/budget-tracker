@@ -26,12 +26,13 @@ https://github.com/abdishukrisuleimanbare/budget-tracker
 
 **Main Branch:** main
 
-## 4. Live Netlify Website
+## 4. Netlify Deployment
 
-**Live Website URL:**  
-[REPLACE WITH YOUR ACTUAL NETLIFY URL]
+**Netlify Site Name:** spendwise-tracker-expense
 
-The SpendWise application is publicly accessible through Netlify.
+**Live Website:** [https://spendwise-tracker-expense.netlify.app/](https://spendwise-tracker-expense.netlify.app/)
+
+SpendWise is hosted on Netlify and connected to the GitHub repository. The deployment configuration uses the `main` branch and the project root (`.`) as the publish directory.
 
 ## 5. Project Files
 
@@ -63,15 +64,9 @@ The deployment process involved:
 
 ## 7. Challenges Encountered During Deployment
 
-Document the actual challenges experienced during deployment.
+One challenge I encountered during deployment was selecting and customizing the Netlify site name. I needed to choose an available site name that clearly identified my SpendWise application.
 
-Examples to consider, if they occurred:
-
-- Configuring the correct publishing directory.
-- Ensuring that HTML, CSS, and JavaScript files were correctly linked.
-- Connecting the GitHub repository to Netlify.
-- Selecting an available custom Netlify site name.
-- Verifying that automatic deployments worked correctly.
+I also learned the importance of configuring the correct GitHub branch and publish directory to ensure that Netlify could locate and publish the application files correctly.
 
 ## 8. Lessons Learned
 
