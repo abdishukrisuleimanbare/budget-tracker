@@ -1,77 +1,94 @@
-# SpendWise Budget Tracker
+# SpendWise – Personal Budget Tracker
 
-SpendWise is an interactive personal budgeting dashboard built with HTML, CSS, and JavaScript. It helps a user record expenses, change a monthly budget, and see the remaining balance update on the webpage.
+## 1. Project Description
 
-## Improvements made this week
+SpendWise is a personal budget-tracking web application developed to help users manage their monthly budgets, record expenses, and monitor their remaining money.
 
-- Added a form to record an expense description, category, and amount.
-- Added a form to update the monthly budget.
-- Added a transaction table with a Remove button for each record.
-- Updated the budget summary and category cards dynamically after changes.
-- Added feedback messages and input validation.
-- Preserved a responsive dashboard layout using CSS Grid and Flexbox.
+The application demonstrates fundamental web development concepts, including HTML structure, CSS styling, JavaScript programming, user interaction, and website deployment.
 
-## Conditional statements
+## 2. Technologies Used
 
-The `getBudgetStatus()` function uses `if`, `else if`, and `else` to compare the remaining budget with zero:
+- **HTML5:** Structures the application.
+- **CSS3:** Provides styling, layout, and responsive design.
+- **JavaScript:** Handles budget calculations and application interactions.
+- **Git:** Tracks changes to project files.
+- **GitHub:** Stores and manages the project's source code.
+- **Netlify:** Hosts the website and provides continuous deployment.
 
-- If the remaining balance is below zero, the application reports that the budget has been exceeded.
-- If the remaining balance is exactly zero, it reports that the budget has been fully used.
-- Otherwise, it reports that the user is within budget.
+## 3. GitHub Repository Information
 
-Conditionals also validate descriptions and amounts before an expense is saved.
+**Repository Name:** budget-tracker
 
-## Arrays and multiple records
+**GitHub Username:** abdishukrisuleimanbare
 
-The `expenses` array stores expense objects. Each object has an `id`, `description`, `category`, and `amount`. For example:
+**Repository URL:**  
+https://github.com/abdishukrisuleimanbare/budget-tracker
 
-```javascript
-{ id: 1, description: "Groceries and meals", category: "Food", amount: 7500 }
+**Main Branch:** main
+
+## 4. Live Netlify Website
+
+**Live Website URL:**  
+[REPLACE WITH YOUR ACTUAL NETLIFY URL]
+
+The SpendWise application is publicly accessible through Netlify.
+
+## 5. Project Files
+
+```text
+budget-tracker/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
-The `categoryDetails` array stores the category names, icons, and descriptions used to render the category cards. New expenses are added with `expenses.push()`. Removing a record uses `filter()` to create an array without the selected expense.
+## 6. Deployment Process Summary
 
-## Loops
+The SpendWise application was deployed using GitHub and Netlify.
 
-`calculateTotalExpenses()` uses a `for...of` loop to add every expense amount. Other loops process the expense array to calculate category totals and create the table rows and category cards. This means the display changes as the array changes rather than relying on individually named expense variables.
+The deployment process involved:
 
-## DOM manipulation
+1. Reviewing and organizing the project files.
+2. Testing the application locally.
+3. Uploading the project files to a public GitHub repository.
+4. Connecting the GitHub repository to Netlify.
+5. Configuring Netlify to publish the website from the repository root.
+6. Deploying the website and obtaining a public Netlify URL.
+7. Customizing the default Netlify site name.
+8. Making a visible change to the application and pushing it to GitHub.
+9. Verifying that Netlify automatically detected the new commit and deployed the updated website.
+10. Testing the live website to confirm that its files and functionality worked correctly.
 
-JavaScript selects webpage elements using `document.querySelector()`. It updates their text using `textContent`, creates rows and cards with `document.createElement()`, and inserts them into the page. `updateDashboard()` recalculates totals and refreshes the summary, category cards, and expense list.
+## 7. Challenges Encountered During Deployment
 
-## Events and user interaction
+Document the actual challenges experienced during deployment.
 
-Event listeners respond to form submissions:
+Examples to consider, if they occurred:
 
-- Submitting the expense form validates and adds a new expense.
-- Submitting the budget form validates and updates the monthly budget.
-- Clicking a Remove button deletes that expense and refreshes the dashboard.
+- Configuring the correct publishing directory.
+- Ensuring that HTML, CSS, and JavaScript files were correctly linked.
+- Connecting the GitHub repository to Netlify.
+- Selecting an available custom Netlify site name.
+- Verifying that automatic deployments worked correctly.
 
-`event.preventDefault()` prevents a form submission from reloading the page. Feedback messages explain whether an action succeeded or needs correction.
+## 8. Lessons Learned
 
-## Challenges and solutions
+Through this assignment, I learned:
 
-- **Keeping the totals accurate:** The totals are recalculated from the `expenses` array each time a record is added or removed.
-- **Handling invalid values:** Required fields and JavaScript checks prevent blank descriptions and zero, negative, or invalid amounts from being accepted.
-- **Keeping the dashboard in sync:** A shared `updateDashboard()` function updates the budget summary, category cards, and transaction table after every successful change.
-- **Displaying user-provided text safely:** The application uses `textContent` when placing descriptions on the page.
+- How to prepare a web project for deployment.
+- How to manage and publish source code using GitHub.
+- How to connect GitHub repositories to Netlify.
+- How to deploy a static website to the internet.
+- How to customize a Netlify subdomain.
+- How continuous deployment automatically updates a live website after GitHub changes.
+- How to test and verify a deployed web application.
 
-## Project files
+## 9. Conclusion
 
-- `index.html` — dashboard structure, budget and expense forms, and display areas.
-- `style.css` — layout, dashboard styling, responsive rules, and status styles.
-- `script.js` — sample records, calculations, conditionals, loops, DOM updates, and event listeners.
-- `README.md` — project overview and documentation of this week's JavaScript concepts.
+SpendWise demonstrates my practical understanding of web development, version control, website hosting, and continuous deployment.
 
-## How to run and test
+The project is maintained in a public GitHub repository and published through Netlify, making it accessible online.
 
-1. Open `index.html` in a modern browser, or use the Live Server extension in Visual Studio Code.
-2. Check that the initial budget is KSh 50,000, total expenses are KSh 37,500, and remaining balance is KSh 12,500.
-3. Add an expense with a description, category, and positive amount. Confirm the total, remaining balance, category card, and transaction table update.
-4. Remove an expense. Confirm the totals update again.
-5. Set a lower budget, such as KSh 30,000. The application should show an over-budget message because the sample expenses total KSh 37,500.
-6. Try a blank description or an amount of zero. Confirm that validation feedback appears and the record is not added.
-
-## Technologies
-
-HTML5, CSS3, and JavaScript (no external libraries required).
+**Project Status:** Successfully deployed and tested after completing all deployment requirements.
